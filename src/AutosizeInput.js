@@ -62,7 +62,7 @@ var AutosizeInput = React.createClass({
 		if (newInputWidth < this.props.minWidth) {
 			newInputWidth = this.props.minWidth;
 		}
-		if (newInputWidth !== this.state.inputWidth) {
+		if (Math.abs(newInputWidth - this.state.inputWidth) > 1) {
 			this.setState({
 				inputWidth: newInputWidth
 			});
